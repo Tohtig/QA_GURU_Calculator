@@ -15,7 +15,7 @@ public class Calculator {
         int second = reader.readSecondArg();
         System.out.print("Введите оператор (+, *): ");
         Operation po = reader.readMathOperation();
-        int sum = po.getOperation().invoke(first, second);
+        double sum = po.getOperation().invoke(first, second);
         System.out.print("\nРезультат:\n");
         return first + " " + po.getSymbol() + " " + second + " = " + sum;
     }

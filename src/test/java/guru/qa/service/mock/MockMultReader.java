@@ -16,6 +16,6 @@ public class MockMultReader implements Reader {
 
     @Override
     public Operation readMathOperation() {
-        return Operation.MULT;
+        return Operation.MULTI;
     }
 }
