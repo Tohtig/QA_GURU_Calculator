@@ -8,6 +8,6 @@ public class Application {
 
     public static void main(String[] args) {
         String result = new Calculator(new ConsoleReader(), new ConsoleWriter()).start();
-        new ConsoleWriter().showMessage(result);
+        new ConsoleWriter().handleString(result);
     }
 }

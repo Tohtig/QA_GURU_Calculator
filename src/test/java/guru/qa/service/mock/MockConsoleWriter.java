@@ -1,11 +1,10 @@
-package guru.qa.service.impl;
+package guru.qa.service.mock;
 
 import guru.qa.service.Writer;
 
-public class ConsoleWriter implements Writer {
+public class MockConsoleWriter implements Writer {
     @Override
     public String handleString(String inputString) {
-        System.out.println(inputString);
         return inputString;
     }
 }
