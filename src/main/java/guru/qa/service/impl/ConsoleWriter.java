@@ -4,7 +4,8 @@ import guru.qa.service.Writer;
 
 public class ConsoleWriter implements Writer {
     @Override
-    public void showMessage(String message) {
+    public String showMessage(String message) {
         System.out.println(message);
+        return message;
     }
 }

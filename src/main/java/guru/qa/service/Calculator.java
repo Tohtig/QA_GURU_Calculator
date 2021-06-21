@@ -18,7 +18,7 @@ public class Calculator {
         int second = reader.readSecondArg();
         writer.showMessage(Messages.ENTER_OPERATION.getMessage());
         Operation po = reader.readMathOperation();
-        double result = po.getOperation().invoke(first, second);
+        int result = po.getOperation().invoke(first, second);
         writer.showMessage(Messages.RESULT.getMessage());
         return first + " " + po.getSymbol() + " " + second + " = " + result;
     }

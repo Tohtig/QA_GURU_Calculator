@@ -5,7 +5,7 @@ import guru.qa.service.OperationHandler;
 public class MinusOperationHandler implements OperationHandler {
 
     @Override
-    public double invoke(int first, int second) {
+    public int invoke(int first, int second) {
         return first - second;
     }
 }
