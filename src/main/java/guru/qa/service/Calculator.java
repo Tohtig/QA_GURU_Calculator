@@ -3,20 +3,23 @@ package guru.qa.service;
 public class Calculator {
 
     private final Reader reader;
+    private final Writer writer;
 
-    public Calculator(Reader reader) {
+    public Calculator(Reader reader, Writer writer) {
         this.reader = reader;
+        this.writer = writer;
     }
 
     public String start() {
-        System.out.println("Please provide first argument");
-        System.out.print("Введите два числа: ");
+        writer.showMessage(Messages.TITLE.getMessage());
+        writer.showMessage(Messages.ENTER_FIRST_ARGUMENT.getMessage());
         int first = reader.readFirstArg();
+        writer.showMessage(Messages.ENTER_SECOND_ARGUMENT.getMessage());
         int second = reader.readSecondArg();
-        System.out.print("Введите оператор (+, *): ");
+        writer.showMessage(Messages.ENTER_OPERATION.getMessage());
         Operation po = reader.readMathOperation();
-        double sum = po.getOperation().invoke(first, second);
-        System.out.print("\nРезультат:\n");
-        return first + " " + po.getSymbol() + " " + second + " = " + sum;
+        double result = po.getOperation().invoke(first, second);
+        writer.showMessage(Messages.RESULT.getMessage());
+        return first + " " + po.getSymbol() + " " + second + " = " + result;
     }
 }
